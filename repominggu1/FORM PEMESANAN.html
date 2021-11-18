@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form Pemesanan</title>
+		<style>
+			body{
+				background-image:url(kopi1.jpg);
+				font-family: Goudy Stout;
+				font-size: 36;
+			}
+			.data{
+				font-size: 14pt;
+				color: #00000;
+				padding: 5em;
+				margin: 3em auto;
+				width: 25em;
+				background-image:url(kopi3.jpg);
+				border-radius: 3px;
+				font-family: Bradley Hand ITC;
+			}
+			label{
+				font-size: 16pt;
+				color: #00000;
+			}
+			input[type="text"],textarea{
+				padding: 8px;
+				width: 95%;
+				background: #C58917;
+				border: 3;
+				font-size: 14pt;
+				font-family: Bradley Hand ITC;
+				margin: 6px 0px;
+			}
+			.tombol{
+				background: #C58917;
+				color: #fff;
+				border: 5;
+				padding: 5px 8px;
+				float: right;
+				font-family: Imprint MT Shadow;
+				
+			}
+			.menuawal{
+				float:right;
+				font-size:10;
+			}
+			.jamdigital{
+				color: black;
+				font-size: 40px;
+				text-align: center;
+				margin-top: 30px;
+				float: center;
+				font-family: Goudy Stout;
+			}
+		</style>
+	</head>
+	<div class="menuawal">
+		<ul>
+			<a href="index.html">MENU AWAL</a>
+		</ul>
+	</div>
+	<body>
+		<center><h1><B>.:. Form Pemesanan .:.</B></h1></center>
+		<div class="data">
+			<form action="#" method="POST" onsubmit="validasi"()">
+			<form action="bismillah.php" method="POST">	
+				
+				<div>
+					<label><B>Nama Lengkap</B><br></label>
+					<input type="text" name="nama" id="nama"><br>
+				</div>
+				<div>
+					<label><B>No Hp<br></label>
+					<input type="text" name="No HP" id="No HP"><br></B>
+				</div>
+				<div>
+					<label><B>Pemesanan<br></label>
+					<input type="checkbox" name="ktr" velue="Ya"> Kopi Toraja Robusta<br>
+					<input type="checkbox" name="kta" velue="Ya"> Kopi Toraja Arabika<br>
+					<input type="checkbox" name="krt" velue="Ya"> Kopi Robusta Temanggung<br>
+					<input type="checkbox" name="kat" velue="Ya"> Kopi Arabika Temanggung<br>
+					<input type="checkbox" name="ket" velue="Ya"> Kopi Excelsa Temanggung<br><br></B>
+				</div>
+				<div>
+					<label><B>Topping<br></label>
+					<input type="checkbox" name="ktr" velue="Ya"> Biskuit Regal<br>
+					<input type="checkbox" name="kta" velue="Ya"> Beng-Beng<br>
+					<input type="checkbox" name="krt" velue="Ya"> Oreo<br>
+					<input type="checkbox" name="ket" velue="Ya"> Jelly</B><br><br>
+				</div>
+				<div>
+					<label><B>Jumlah Pemesanan<br></label>
+					<select>
+					<option selected="select">-= Pilih =-</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					</select><br>
+				</div>
+				<div>
+					<label><B><br>Metode Pembayaran<br></label>
+					<input type="radio" name="byr" value="COD"> Cash On Delivery (COD)<br>
+					<input type="radio" name="byr" value="BM"> Bank Mandiri<br>
+					<input type="radio" name="byr" value="BR"> Bank BRI<br>
+					<input type="radio" name="byr" value="BN"> Bank BNI<br>
+					<input type="radio" name="byr" value="Dana"> DANA<br><br></B>
+				</div>
+				<div>
+					<label><B>Alamat Lengkap<br></label>
+					<textarea name="kontribusi"cols="50"rows="5"></textarea><br><br></B>
+				</div>
+				<div>
+					<input type="submit" class="tombol" value="Pesan"><br><br><br>
+				</div>
+
+					<h3 align="center " id="tanggal"></h3>
+					<div class="jamdigital">
+					</div>	
+				</div>
+					
+		<script type="text/javascript">
+		var tgl = new Date();
+			document.getElementById("tanggal").innerHTML = "Waktu akses "+tgl;
+			
+			window.setTimeout("waktu()", 1000);
+			function waktu(){
+				var waktu = new Date();
+				setTimeout("waktu()", 1000);
+				document.getElementById("jam").innerHTML = waktu.getHours();
+				document.getElementById("menit").innerHTML = waktu.getMinutes();
+				document.getElementById("detik").innerHTML = waktu.getSeconds();
+			}
+		</script>
+	</body>
+</html>
+		
